@@ -1,64 +1,115 @@
-# garbage-detection-smart-city-analytics
-Smart City Garbage Detection and Analytics using YOLOv8 and Deep Learning
+# AI-Based Smart City Garbage Detection and Analytics System Using YOLOv8
 
+## Project Overview
 
-# Garbage Detection Smart City Analytics
+This project proposes an AI-powered Smart City Waste Analytics and Decision-Support System using YOLOv8 for garbage detection and classification.
 
-## Project Objective
+The system analyzes images, videos, and CCTV feeds to identify waste objects, calculate waste severity, generate municipal analytics, and support data-driven waste management decisions.
 
-The objective of this project is to develop an intelligent garbage detection and analytics system for smart city environments using Deep Learning and YOLOv8. The system aims to automatically detect litter and waste objects from images and provide analytical insights to improve urban cleanliness and waste management.
+---
 
-## Expected Outcomes
+## Objectives
 
-* Develop a garbage detection model using YOLOv8.
-* Train the model using TACO and Roboflow garbage datasets.
-* Detect waste objects in real-world environments.
-* Build an analytics dashboard for visualization.
-* Improve waste monitoring and smart city decision-making.
-* Generate performance metrics including Precision, Recall, mAP, and F1-Score.
+* Detect garbage using YOLOv8
+* Classify waste categories
+* Generate garbage counts
+* Calculate Waste Density Index
+* Generate Severity Scores
+* Identify waste hotspots
+* Provide ward-wise and camera-wise analytics
+* Support municipal decision-making through dashboards
 
-## Technologies Used
+---
 
-* Python
-* YOLOv8 (Ultralytics)
-* OpenCV
-* Pandas
-* Matplotlib
-* Plotly
-* Streamlit
-* Google Colab
+## Dataset
 
-## Dataset Sources
+Dataset Used: TACO (Trash Annotations in Context)
 
-1. TACO Dataset (Trash Annotations in Context)
-2. Roboflow Garbage Detection Dataset
+Dataset was not uploaded to this repository due to size limitations.
+
+Download Instructions:
+
+1. Visit the official TACO Dataset repository.
+2. Download images and annotations.
+3. Convert annotations to YOLO format.
+4. Organize into train, validation, and test folders.
+
+---
+
+## Model Information
+
+Model: YOLOv8n
+
+Task: Garbage Detection
+
+Classes:
+
+* Plastic
+* Paper
+* Glass
+* Metal
+* Organic Waste
+
+---
+
+## Smart City Analytics Features
+
+* Waste Detection
+* Waste Classification
+* Garbage Counting
+* Waste Density Index
+* Severity Score
+* Ward-wise Analytics
+* Camera-wise Analytics
+* Hotspot Identification
+* Dashboard Monitoring
+* Alert Generation
+
+---
 
 ## Repository Structure
 
-docs/ – Project documentation
+docs/
+dashboard/
+paper/
+notebooks/
+results/
+src/
 
-notebooks/ – Jupyter and Colab notebooks
+---
 
-src/ – Source code and training scripts
+## Project Status
 
-dashboard/ – Streamlit dashboard files
+✔ Dataset Preparation Completed
 
-results/ – Model outputs and evaluation results
+✔ YOLOv8 Training Completed
 
-paper/ – Research papers and references
+✔ Model Evaluation Completed
 
-## Week 1 Status
+✔ Error Analysis Completed
 
-### Completed Tasks
+✔ Smart City Analytics Framework Completed
 
-* Literature review completed.
-* Research papers collected and analyzed.
-* Dataset source notes prepared.
-* TACO dataset downloaded.
-* Development environment setup initiated.
-* GitHub repository created.
-* Project structure finalized.
+✔ Dashboard Wireframes Completed
+
+✔ Waste Density Index Developed
+
+✔ Research Gap Matrix Completed
+
+✔ Literature Review Matrix Completed
+
+✔ Research Paper Draft v1 Completed
+
+Future Work:
+
+* Real-time CCTV Integration
+* Dashboard Implementation
+* Municipal Deployment Framework
+
+---
 
 ## Author
+
 Ruchita Kahane
-Smart City Garbage Detection and Analytics Project
+
+Internship Project – Smart City Garbage Analytics
