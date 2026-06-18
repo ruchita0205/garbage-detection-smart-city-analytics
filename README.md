@@ -1,252 +1,236 @@
-# AI-Based Smart City Garbage Detection and Analytics System Using YOLOv8
+# Smart City Garbage Analytics Framework
 
-## Project Overview
+## AI-Powered Waste Detection, Severity Assessment, Hotspot Analytics, and Municipal Decision Support
 
-This project proposes an AI-powered Smart City Waste Analytics and Decision-Support System using YOLOv8 for garbage detection, severity assessment, hotspot identification, and municipal resource allocation.
+### Project Overview
 
-The system analyzes images, videos, CCTV feeds, and geospatial information to identify waste objects, calculate waste severity, detect hotspot zones, generate municipal analytics, and support data-driven waste management decisions.
+This project presents a Smart City Garbage Analytics Framework that combines Artificial Intelligence, Computer Vision, Multi-Criteria Decision Analysis, and Spatial Analytics to support intelligent municipal waste management.
 
-The project extends traditional waste detection systems by integrating Smart Waste Severity Index (SWSI), DBSCAN-based hotspot analytics, and municipal decision-support mechanisms into a unified Smart City Garbage Analytics Framework.
+The framework integrates:
 
----
+* YOLOv8-based garbage detection
+* Smart Waste Severity Index (SWSI)
+* AHP-based criteria weighting
+* DBSCAN hotspot detection
+* Municipal resource allocation planning
+* Dashboard-based decision support
+* Experimental and simulated validation
 
-# Objectives
-
-* Detect garbage using YOLOv8
-* Classify waste categories
-* Generate garbage counts
-* Calculate Smart Waste Severity Index (SWSI)
-* Identify waste hotspots using DBSCAN clustering
-* Generate municipal priority rankings
-* Recommend resource allocation strategies
-* Provide ward-wise and camera-wise analytics
-* Support municipal decision-making through dashboards
-* Enable data-driven smart city waste management
+The objective is to help municipal authorities identify waste accumulation zones, prioritize cleanup activities, optimize resource allocation, and improve urban sanitation management.
 
 ---
 
-# Dataset
+## Research Contributions
 
-### Dataset Used
+### Contribution 1: YOLOv8 Waste Detection
 
-**TACO (Trash Annotations in Context)**
+A customized YOLOv8 model is used to detect garbage from images, videos, and surveillance feeds.
 
-The dataset was not uploaded to this repository due to size limitations.
+Features:
 
-### Download Instructions
-
-1. Visit the official TACO Dataset repository.
-2. Download images and annotations.
-3. Convert annotations to YOLO format.
-4. Organize into train, validation, and test folders.
-
-### Classes Used
-
-* Aluminum Can
-* Glass Bottle
-* HDPEM
-* PET
+* Real-time waste detection
+* Multi-object detection
+* Confidence-based prediction
+* Waste density estimation
 
 ---
 
-# Model Information
+### Contribution 2: Smart Waste Severity Index (SWSI)
 
-### Primary Model
+A novel Smart Waste Severity Index is proposed to prioritize waste incidents.
 
-YOLOv8n
+The SWSI combines:
 
-### Comparative Models
-
-* YOLOv8s
-* YOLOv5s (Planned)
-* YOLOv7 (Planned)
-* SSD (Planned)
-* Faster R-CNN (Planned)
-
-### Task
-
-Garbage Detection and Classification
-
----
-
-# Experimental Results
-
-## YOLOv8n Performance
-
-| Metric    | Value  |
-| --------- | ------ |
-| Precision | 97.48% |
-| Recall    | 98.24% |
-| mAP@50    | 98.98% |
-| mAP@50-95 | 84.87% |
-
-## YOLOv8s Performance
-
-| Metric    | Value  |
-| --------- | ------ |
-| Precision | 96.99% |
-| Recall    | 98.98% |
-| mAP@50    | 99.00% |
-| mAP@50-95 | 85.11% |
-
----
-
-# Smart City Analytics Features
-
-## Waste Detection Module
-
-* Waste Detection
-* Waste Classification
-* Garbage Counting
-* Bounding Box Generation
-* Confidence Score Analysis
-
-## Smart Waste Severity Index (SWSI)
-
-Severity Score Formula:
-
-SWSI = 0.35(WC) + 0.30(WTW) + 0.20(LS) + 0.15(HF)
-
-Where:
-
-* WC = Waste Count
-* WTW = Waste Type Weight
-* LS = Location Sensitivity
-* HF = Historical Frequency
-
-Severity Levels:
-
-* Low
-* Moderate
-* High
-* Critical
-
----
-
-## Hotspot Detection Module
-
-Method Used:
-
-**DBSCAN (Density-Based Spatial Clustering of Applications with Noise)**
-
-Inputs:
-
-* GPS Coordinates
 * Waste Count
-* SWSI Score
+* Waste Type Weight
+* Location Sensitivity
+* Historical Frequency
 
-Outputs:
+Final validated AHP weights:
 
-* Waste Hotspots
-* Cluster Density
-* Priority Zones
-
----
-
-## Municipal Resource Allocation Module
-
-Provides:
-
-* Worker Allocation Recommendations
-* Vehicle Allocation Recommendations
-* Supervisor Alerts
-* Cleanup Scheduling
-* Priority Ranking
+| Criterion            | Weight |
+| -------------------- | ------ |
+| Waste Count          | 0.4658 |
+| Waste Type Weight    | 0.2771 |
+| Location Sensitivity | 0.1611 |
+| Historical Frequency | 0.0960 |
 
 ---
 
-## Dashboard Analytics
+### Contribution 3: AHP-Based Decision Weighting
 
-* Real-Time Waste Monitoring
-* Severity Analytics
-* Hotspot Visualization
-* Ward-Wise Analytics
-* Camera-Wise Analytics
-* Historical Trends
-* Resource Recommendations
-* Municipal Decision Support
+The Analytic Hierarchy Process (AHP) was used to determine criterion importance.
 
----
+Validation Results:
 
-# Research Contributions
+* λmax = 4.0310
+* CI = 0.01035
+* CR = 0.0115
 
-This project introduces:
+Result:
 
-1. YOLOv8-based waste detection framework.
-2. Smart Waste Severity Index (SWSI) for waste prioritization.
-3. DBSCAN-based hotspot analytics framework.
-4. Municipal resource allocation recommendation engine.
-5. Dashboard-based decision-support system.
-6. Integrated Smart City Garbage Analytics Framework with feedback-driven monitoring.
+CR < 0.10
+
+The decision matrix is considered highly consistent.
 
 ---
 
-# Project Status
+### Contribution 4: DBSCAN Hotspot Analytics
 
-## Completed
+DBSCAN clustering identifies waste accumulation hotspots.
 
-✔ Dataset Preparation Completed
+Outputs include:
 
-✔ Dataset Verification Completed
-
-✔ YOLOv8n Training Completed
-
-✔ YOLOv8s Training Completed
-
-✔ Model Evaluation Completed
-
-✔ Error Analysis Completed
-
-✔ Smart Waste Severity Index (SWSI) Developed
-
-✔ DBSCAN Hotspot Detection Methodology Developed
-
-✔ Municipal Resource Allocation Framework Developed
-
-✔ Baseline Model Comparison Completed
-
-✔ Quantitative Ablation Study Plan Completed
-
-✔ Research Gap Matrix Completed
-
-✔ Literature Review Matrix (50 Papers) Completed
-
-✔ Research Paper Draft v3 Completed
-
-✔ Revised System Architecture Diagram Completed
+* High-priority waste zones
+* Cluster density analysis
+* Municipal cleanup prioritization
+* Waste hotspot visualization
 
 ---
 
-## In Progress
+### Contribution 5: Municipal Resource Allocation Model
 
-* Dashboard Development
-* Hotspot Visualization
-* Decision-Support Integration
+The framework converts severity scores into actionable municipal plans.
 
----
+Generated recommendations include:
 
-## Future Work
-
-* YOLOv5s Benchmark Evaluation
-* YOLOv7 Benchmark Evaluation
-* SSD Benchmark Evaluation
-* Faster R-CNN Benchmark Evaluation
-* Vehicle Routing Optimization
-* Workforce Optimization
-* Real-Time CCTV Integration
-* Edge AI Deployment
-* Smart City Command Center Integration
+* Workforce allocation
+* Vehicle deployment
+* Cleanup scheduling
+* Priority-based intervention planning
 
 ---
 
-# Research Significance
+### Contribution 6: Dashboard-Based Decision Support
 
-Most existing waste management studies focus only on waste detection or smart bin monitoring. This project extends beyond detection by integrating severity assessment, hotspot analytics, resource allocation, and municipal decision support into a single framework.
+Interactive dashboards provide:
 
-The proposed framework aims to support smarter, faster, and more efficient municipal waste management operations in future smart cities.
+* Waste severity monitoring
+* Hotspot visualization
+* Resource allocation recommendations
+* Operational decision support
 
 ---
 
-# Author
+## System Architecture
 
-**Ruchita Kahane**
+Input Data
+
+↓
+
+YOLOv8 Waste Detection
+
+↓
+
+Waste Analytics Engine
+
+↓
+
+Smart Waste Severity Index (SWSI)
+
+↓
+
+DBSCAN Hotspot Detection
+
+↓
+
+Resource Allocation Model
+
+↓
+
+Dashboard Decision Support
+
+↓
+
+Municipal Action Recommendations
+
+---
+
+## Experimental Validation
+
+### Detection Performance
+
+* Precision Evaluation
+* Recall Evaluation
+* F1 Score Analysis
+* Confidence Threshold Analysis
+
+### Severity Assessment Validation
+
+* AHP Validation
+* Expert Validation
+* Sensitivity Analysis
+
+### Hotspot Analytics Validation
+
+* DBSCAN Parameter Validation
+* Simulated Municipal Case Study
+
+### Dashboard Validation
+
+* Decision Support Verification
+* Resource Allocation Validation
+
+---
+
+## Repository Structure
+
+```text
+Dataset/
+Model_Training/
+Baseline_Model_Comparison/
+Methodology/
+Validation_and_Experiments/
+Dashboard_and_Decision_Support/
+Research_Paper/
+Literature_Review/
+Project_Management/
+Final_Deliverables/
+```
+
+---
+
+## Technologies Used
+
+* Python
+* YOLOv8
+* OpenCV
+* Pandas
+* NumPy
+* Scikit-Learn
+* DBSCAN
+* Matplotlib
+* Plotly
+* Streamlit
+* Jupyter Notebook
+
+---
+
+## Research Outputs
+
+* Smart Waste Severity Index (SWSI)
+* AHP Validation Framework
+* DBSCAN Hotspot Detection Model
+* Municipal Resource Allocation Model
+* Dashboard Decision Support System
+* Research Paper Draft v5
+
+---
+
+## Future Scope
+
+* CCTV-based real-time deployment
+* GIS integration
+* Smart bin integration
+* IoT-enabled waste monitoring
+* Municipal command center deployment
+* Smart city digital twin integration
+
+---
+
+## Author
+
+Ruchita Kahane
+
+AI-Based Smart City Garbage Analytics Framework
+
